@@ -1,0 +1,22 @@
+{
+  "name": "casa-solar",
+  "version": "1.0.0",
+  "description": "Site de vendas de painéis solares - Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrCasagrande/casa-solar.git"
+  },
+  "author": "BrCasagrande",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrCasagrande/casa-solar/issues"
+  },
+  "homepage": "https://github.com/BrCasagrande/casa-solar#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.3.1"
+  }
+}
