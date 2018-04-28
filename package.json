@@ -10,13 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/BrCasagrande/casa-solar.git"
   },
-  "author": "BrCasagrande",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BrCasagrande/casa-solar/issues"
   },
-  "homepage": "https://github.com/BrCasagrande/casa-solar#readme",
-  "devDependencies": {
-    "@types/jquery": "^3.3.1"
-  }
+  "homepage": "https://github.com/BrCasagrande/casa-solar#readme"
 }
