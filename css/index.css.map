@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,SAAS;EACL,OAAO,EAAE,IAAI;EACb,QAAQ,EAAE,QAAQ",
-"sources": ["../scss/nave.scss"],
+"mappings": "AAAA,SAAS;EACL,OAAO,EAAE,IAAI;EACb,QAAQ,EAAE,QAAQ;;ACFtB,cAAc;EACV,MAAM,EAAE,KAAK",
+"sources": ["../scss/nave.scss","../scss/home.scss"],
 "names": [],
 "file": "index.css"
 }
