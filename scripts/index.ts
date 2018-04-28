@@ -1,5 +1,11 @@
-/// <reference path ="../node_modules/@types/jquery/index.d.ts"/> 
-let p = document.createElement("p");
+$(document).ready(function(){
+    createMenu();  
+    carregaPag();  
+});
 
-document.body.appendChild(p);
-
+let carregaPag = () =>{
+    $('#home').on("click",function(){
+        $( "#conteudo" ).load( `scripts/partials/home.html` );
+    });
+    
+}

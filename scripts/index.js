@@ -1,5 +1,11 @@
 "use strict";
-/// <reference path ="../node_modules/@types/jquery/index.d.ts"/> 
-var p = document.createElement("p");
-document.body.appendChild(p);
+$(document).ready(function () {
+    createMenu();
+    carregaPag();
+});
+var carregaPag = function () {
+    $('#home').on("click", function () {
+        $("#conteudo").load("scripts/partials/home.html");
+    });
+};
 //# sourceMappingURL=index.js.map
