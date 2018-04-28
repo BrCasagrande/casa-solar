@@ -2,6 +2,8 @@
 $(document).ready(function () {
     createMenu();
     carragaAjax();
+    subMenu();
+    $("conteudo").load("scripts/partials/home.html");
 });
 var carragaAjax = function () {
     $.post('scripts/partials/nav.html', function (data, status) {
@@ -12,7 +14,11 @@ var carragaAjax = function () {
 var carregaPag = function () {
     $('#menu-itens a').click(function () {
         var lnk = $(this).attr('value');
-        $("conteudo").load("scripts/partials/" + lnk + ".html");
+        $("conteudo").load("scripts/partials/" + lnk + ".html", function (response, status, xhr) {
+            if (status == "error") {
+                $("conteudo").load("scripts/partials/404.html");
+            }
+        });
     });
 };
 //# sourceMappingURL=index.js.map

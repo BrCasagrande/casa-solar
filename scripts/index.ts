@@ -1,7 +1,8 @@
 $(document).ready(function(){
-    createMenu();  
-
+    createMenu(); 
     carragaAjax();
+    subMenu();
+    $("conteudo").load(`scripts/partials/home.html`);
 });
 
 let carragaAjax = () =>{
@@ -10,10 +11,15 @@ let carragaAjax = () =>{
             subMenu();
     }); 
 }
-let carregaPag = () =>{
+let carregaPag = () =>{    
     $('#menu-itens a').click(function(){
         let lnk = $(this).attr('value');   
-        $("conteudo").load(`scripts/partials/${lnk}.html`);        
+        $("conteudo").load(`scripts/partials/${lnk}.html`, 
+        (response, status, xhr)=>{
+            if(status == "error"){
+                $("conteudo").load(`scripts/partials/404.html`)
+            }
+        });        
     });
     
     
