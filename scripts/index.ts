@@ -1,11 +1,20 @@
 $(document).ready(function(){
     createMenu();  
-    carregaPag();  
+
+    carragaAjax();
 });
 
+let carragaAjax = () =>{
+    $.post('scripts/partials/nav.html', function(data, status){ 
+            carregaPag();
+            subMenu();
+    }); 
+}
 let carregaPag = () =>{
-    $('#home').on("click",function(){
-        $( "#conteudo" ).load( `scripts/partials/home.html` );
+    $('#menu-itens a').click(function(){
+        let lnk = $(this).attr('value');   
+        $("conteudo").load(`scripts/partials/${lnk}.html`);        
     });
+    
     
 }

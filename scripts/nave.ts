@@ -3,9 +3,11 @@ const createMenu = () =>{
     
 }
 $('nav-principal').ready(function(){
-    $.post('scripts/partials/nav.html', function(data, status){        
-        $("li").hover(function(){$(this).children('ul').css("display", "block")}
-        , function(){$(this).children('ul').css("display", "none")});
-     }); 
+    
 });
+
+let subMenu = () =>{
+    $("li").hover(function(){$(this).children('ul').css("display", "block")}
+    , function(){$(this).children('ul').css("display", "none")});
+}
 
