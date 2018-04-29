@@ -2,13 +2,11 @@
 $(document).ready(function () {
     createMenu();
     carragaAjax();
-    subMenu();
     $("conteudo").load("scripts/partials/home.html");
 });
 var carragaAjax = function () {
     $.post('scripts/partials/nav.html', function (data, status) {
         carregaPag();
-        subMenu();
     });
 };
 var carregaPag = function () {
