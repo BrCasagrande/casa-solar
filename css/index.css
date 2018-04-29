@@ -5,4 +5,12 @@
 .carousel-item {
   height: 500px; }
 
+#servico {
+  padding: 5em; }
+  #servico div {
+    padding: 2em;
+    text-align: center; }
+    #servico div img {
+      height: 30%; }
+
 /*# sourceMappingURL=index.css.map */
