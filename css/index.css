@@ -2,15 +2,39 @@
   display: none;
   position: absolute; }
 
+.nav-link:focus {
+  font-weight: bold; }
+
+h2 {
+  padding-top: 1em;
+  padding-bottom: 1em; }
+
 .carousel-item {
   height: 500px; }
 
-#servico {
-  padding: 5em; }
-  #servico div {
-    padding: 2em;
-    text-align: center; }
-    #servico div img {
-      height: 30%; }
+#servico div {
+  height: 20em;
+  padding: 1em;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 6px solid #ccc; }
+  #servico div:hover {
+    box-shadow: 0px 5px 10px 5px #ccc;
+    border-bottom: 6px solid #1a9b00;
+    transition: border-bottom 0.5s, box-shadow 0.5s;
+    z-index: 999; }
+  #servico div img {
+    height: 50%; }
+
+#sobre {
+  background-color: #f8f8f8; }
+  #sobre img {
+    margin-bottom: 1em; }
+  #sobre p {
+    text-align: justify;
+    padding: 1em; }
+
+#contato {
+  background-color: #171717; }
 
 /*# sourceMappingURL=index.css.map */

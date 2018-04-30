@@ -1,13 +1,40 @@
+
+h2{
+    padding-top: 1em;
+    padding-bottom: 1em;        
+}
 .carousel-item{
     height: 500px;    
 }
-#servico{
-    padding: 5em;
+#servico{    
     div{
-        padding: 2em;
+        height: 20em;
+        padding: 1em;
         text-align: center;
+        background-color: #fff;
+        border-bottom: 6px solid #ccc;
+        &:hover{
+            box-shadow: 0px 5px 10px 5px #ccc;
+            border-bottom: 6px solid rgb(26, 155, 0);
+            transition: border-bottom 0.5s, box-shadow 0.5s;
+            z-index: 999;
+            
+        }
         img{
-            height: 30%;
+            height: 50%;
         }
     }
+}
+#sobre{
+    background-color: #f8f8f8;
+    img{
+        margin-bottom: 1em;
+    }
+    p{
+        text-align: justify;
+        padding: 1em;
+    }    
+}
+#contato{
+    background-color: #171717;
 }
