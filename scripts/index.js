@@ -9,9 +9,10 @@ var carragaAjax = function () {
         carregaPag();
     });
 };
+/* Carrega o conteudo com base no value do elemento a */
 var carregaPag = function () {
     $('#menu-itens a').click(function () {
-        var lnk = $(this).attr('value');
+        var lnk = $(this).attr('value'); // a value          
         $("conteudo").load("scripts/partials/" + lnk + ".html", function (response, status, xhr) {
             if (status == "error") {
                 $("conteudo").load("scripts/partials/404.html");
