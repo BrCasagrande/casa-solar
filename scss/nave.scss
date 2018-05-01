@@ -1,7 +1,48 @@
-.menuShow{    
-    display: none;
-    position: absolute;
+@mixin desktop{
+	@media screen and (min-width: 992px) { 	
+		@content;
+	}
 }
-.nav-link:focus{
-    font-weight: bold;
+
+nav{
+    background-color: #099042;
+    #logo{
+        background-image: url(../img/logo.png);
+        background-repeat: no-repeat;
+        width: 2.5em;
+        height: 2.5em;        		
+        background-position-x: center;
+        background-position-y: center; 
+        background-size: cover;
+        margin: 0.25em;
+    }
+    .nav-link{
+        &:focus{ font-weight: bold; }
+    }    
 }
+footer{
+
+    a[name="facebook"]{background-image: url(../img/facebook.png);}
+    a[name="twitter"]{background-image: url(../img/twitter.png);}
+    a[name="youtube"]{background-image: url(../img/youtube.png);}
+    a[name="linkedin"]{background-image: url(../img/linkedin.png);}
+    a[name="github"]{background-image: url(../img/github.png);}
+    a{
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center; 
+        background-size: cover;
+        margin: 0.25em;
+        width: 5em;
+        height: 5em;
+
+        @include desktop{
+            filter: grayscale(100%);
+            &:hover{
+                filter: grayscale(0%);
+                transition: filter 0.5s;
+            }
+        }
+    }
+}
+    

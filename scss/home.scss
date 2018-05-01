@@ -13,16 +13,13 @@ h2{
         text-align: center;
         background-color: #fff;
         border-bottom: 6px solid #ccc;
-        &:hover{
+        &:hover {
             box-shadow: 0px 5px 10px 5px #ccc;
             border-bottom: 6px solid rgb(26, 155, 0);
             transition: border-bottom 0.5s, box-shadow 0.5s;
-            z-index: 999;
-            
+            z-index: 999;                                  
         }
-        img{
-            height: 50%;
-        }
+        img{ height: 50%; }
     }
 }
 #sobre{

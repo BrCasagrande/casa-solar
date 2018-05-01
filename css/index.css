@@ -1,9 +1,41 @@
-.menuShow {
-  display: none;
-  position: absolute; }
+nav {
+  background-color: #099042; }
+  nav #logo {
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    width: 2.5em;
+    height: 2.5em;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    margin: 0.25em; }
+  nav .nav-link:focus {
+    font-weight: bold; }
 
-.nav-link:focus {
-  font-weight: bold; }
+footer a[name="facebook"] {
+  background-image: url(../img/facebook.png); }
+footer a[name="twitter"] {
+  background-image: url(../img/twitter.png); }
+footer a[name="youtube"] {
+  background-image: url(../img/youtube.png); }
+footer a[name="linkedin"] {
+  background-image: url(../img/linkedin.png); }
+footer a[name="github"] {
+  background-image: url(../img/github.png); }
+footer a {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  margin: 0.25em;
+  width: 5em;
+  height: 5em; }
+  @media screen and (min-width: 992px) {
+    footer a {
+      filter: grayscale(100%); }
+      footer a:hover {
+        filter: grayscale(0%);
+        transition: filter 0.5s; } }
 
 h2 {
   padding-top: 1em;
