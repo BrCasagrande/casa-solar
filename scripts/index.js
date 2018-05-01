@@ -1,23 +1,36 @@
 "use strict";
 $(document).ready(function () {
-    createMenu();
+    createPage();
     carragaAjax();
     $("conteudo").load("scripts/partials/home.html");
 });
 var carragaAjax = function () {
     $.post('scripts/partials/nav.html', function (data, status) {
-        carregaPag();
+        loadContent();
+        if ($('nav').length == 0) { //Prevent err
+            carragaAjax();
+        }
     });
 };
+/* Adiciona o navegador a página */
+var createPage = function () {
+    $('nav-principal').load('scripts/partials/nav.html');
+    $('footer').load("scripts/partials/footer.html");
+};
 /* Carrega o conteudo com base no value do elemento a */
-var carregaPag = function () {
+var loadContent = function () {
     $('#menu-itens a').click(function () {
-        var lnk = $(this).attr('value'); // a value          
+        // seleciona o valor de 'a'para fazer o load da pagina
+        var lnk = $(this).attr('value');
         $("conteudo").load("scripts/partials/" + lnk + ".html", function (response, status, xhr) {
             if (status == "error") {
                 $("conteudo").load("scripts/partials/404.html");
             }
         });
+        if (lnk == 'produtos') {
+            $('#navProdutos h1').append(lnk);
+            console.log("Foi");
+        }
     });
 };
 //# sourceMappingURL=index.js.map
