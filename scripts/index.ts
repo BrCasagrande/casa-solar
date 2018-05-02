@@ -22,12 +22,18 @@ let loadContent = () =>{
     $('#menu-itens a').click(function(){
         // seleciona o valor de 'a'para fazer o load da pagina
         let lnk = $(this).attr('value'); 
-        $("conteudo").load(`scripts/partials/${lnk}.html`, 
+        if(lnk == 'simulador'){
+            $('conteudo').append('<div id="simula"></div>');
+            $('#simula').load(`scripts/partials/${lnk}.html`);
+        }
+        else{
+            $("conteudo").load(`scripts/partials/${lnk}.html`, 
         (response, status, xhr)=>{
             if(status == "error"){
                 $("conteudo").load(`scripts/partials/404.html`)
             }
         }); 
+        }
         if(lnk == 'produtos'){
             $('#navProdutos h1').append(lnk);
             console.log("Foi");
