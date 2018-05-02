@@ -3,8 +3,7 @@
 		@content;
 	}
 }
-
-nav{
+#navPrincipal{
     background-color: #099042;
     #logo{
         background-image: url(../img/logo.png);
@@ -16,12 +15,11 @@ nav{
         background-size: cover;
         margin: 0.25em;
     }
-    .nav-link{
-        &:focus{ font-weight: bold; }
-    }    
 }
+.nav-link{
+    &:focus{ font-weight: bold; }
+}    
 footer{
-
     a[name="facebook"]{background-image: url(../img/facebook.png);}
     a[name="twitter"]{background-image: url(../img/twitter.png);}
     a[name="youtube"]{background-image: url(../img/youtube.png);}
