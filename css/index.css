@@ -1,6 +1,6 @@
-nav {
+#navPrincipal {
   background-color: #099042; }
-  nav #logo {
+  #navPrincipal #logo {
     background-image: url(../img/logo.png);
     background-repeat: no-repeat;
     width: 2.5em;
@@ -9,8 +9,9 @@ nav {
     background-position-y: center;
     background-size: cover;
     margin: 0.25em; }
-  nav .nav-link:focus {
-    font-weight: bold; }
+
+.nav-link:focus {
+  font-weight: bold; }
 
 footer a[name="facebook"] {
   background-image: url(../img/facebook.png); }
@@ -68,5 +69,14 @@ h2 {
 
 #contato {
   background-color: #171717; }
+
+#simula {
+  width: 400px;
+  height: 400px;
+  background-color: blueviolet;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  box-shadow: 0 0 0 30em #00000094; }
 
 /*# sourceMappingURL=index.css.map */
