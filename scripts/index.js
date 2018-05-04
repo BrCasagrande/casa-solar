@@ -2,6 +2,7 @@
 $(document).ready(function () {
     createPage();
     carragaAjax();
+    $("conteudo").load("scripts/partials/home.html");
 });
 var carragaAjax = function () {
     $.post('scripts/partials/nav.html', function (data, status) {
@@ -18,17 +19,31 @@ var createPage = function () {
 };
 /* Carrega o conteudo com base no value do elemento a */
 var loadContent = function () {
-    $("conteudo").load("scripts/partials/home.html");
-    $('#menu-itens a').click(function () {
+    var nl = $('#menu-itens .nav-link');
+    nl.click(function () {
         // seleciona o valor de 'a'para fazer o load da pagina
-        var lnk = $(this).attr('value');
-        $("conteudo").load("scripts/partials/" + lnk + ".html", function (response, status, xhr) {
+        var lnk = $(this);
+        $("conteudo").load("scripts/partials/" + lnk.attr('value') + ".html", function (response, status, xhr) {
             if (status == "error") {
                 $("conteudo").load("scripts/partials/404.html");
             }
-            if (lnk == 'produtos') {
-                $('#navProdutos h1').append('Produtos');
+            if (lnk.attr('value') == 'produtos') {
+                pContent();
             }
+            $('h1').append(lnk.text());
+        });
+    });
+};
+var pContent = function () {
+    var nl = $('#navProdutos .nav-link');
+    nl.click(function () {
+        // seleciona o valor de 'a'para fazer o load da pagina
+        var lnk = $(this);
+        $("pcontent").load("scripts/partials/" + lnk.attr('value') + ".html", function (response, status, xhr) {
+            if (status == "error") {
+                $("pcontent").load("scripts/partials/404.html");
+            }
+            $('#hp').text(lnk.text());
         });
     });
 };

@@ -1,6 +1,7 @@
 $(document).ready(() =>{
     createPage(); 
     carragaAjax();    
+    $("conteudo").load(`scripts/partials/home.html`);        
 });
 
 let carragaAjax = () =>{
@@ -17,19 +18,32 @@ const createPage = () =>{
     $('footer').load(`scripts/partials/footer.html`);
  }
 /* Carrega o conteudo com base no value do elemento a */
-let loadContent = () =>{   
-    $("conteudo").load(`scripts/partials/home.html`);                    
-    $('#menu-itens a').click(function(){
+let loadContent = () =>{        
+    let nl = $('#menu-itens .nav-link'); 
+    nl.click(function(){
         // seleciona o valor de 'a'para fazer o load da pagina
-        let lnk = $(this).attr('value'); 
-            $("conteudo").load(`scripts/partials/${lnk}.html`, 
+        let lnk = $(this); 
+        $("conteudo").load(`scripts/partials/${lnk.attr('value')}.html`, 
         (response, status, xhr)=>{
             if(status == "error"){
                 $("conteudo").load(`scripts/partials/404.html`)
-            }
-            if(lnk == 'produtos'){
-                $('#navProdutos h1').append('Produtos');
-            } 
+            }            
+            if(lnk.attr('value') == 'produtos'){pContent(); }
+            $('h1').append(lnk.text());
+        });         
+    });    
+}
+let pContent = () =>{        
+    let nl = $('#navProdutos .nav-link'); 
+    nl.click(function(){
+        // seleciona o valor de 'a'para fazer o load da pagina
+        let lnk = $(this); 
+        $("pcontent").load(`scripts/partials/${lnk.attr('value')}.html`, 
+        (response, status, xhr)=>{
+            if(status == "error"){
+                $("pcontent").load(`scripts/partials/404.html`)
+            }            
+            $('#hp').text(lnk.text());
         });         
     });    
 }
