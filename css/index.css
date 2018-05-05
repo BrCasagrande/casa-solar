@@ -38,6 +38,9 @@ footer a {
         filter: grayscale(0%);
         transition: filter 0.5s; } }
 
+#navProdutos {
+  z-index: 999; }
+
 h2 {
   padding-top: 1em;
   padding-bottom: 1em; }
