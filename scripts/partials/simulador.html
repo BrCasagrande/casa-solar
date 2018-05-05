@@ -2,17 +2,34 @@
   <h1></h1>
   <form>
     <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label for="valor">Valor da Conta</label>
+      <div class="m-3">
+        <label for="valor"><b>Valor da Conta</b></label>
         <input type="number" class="form-control" id="valor" placeholder="R$" required>
         
       </div>
-      <div class="col-md-4 mb-3">
-        <label for="consumo">Consumo</label>
+      <div class="m-3">
+        <label for="consumo"><b>Consumo</b></label>
         <input type="number" class="form-control" id="consumo" placeholder="Kw" required>      
-      </div>      
-    </div>
-    <button class="btn btn-primary" type="submit">Calcular</button>
+      </div>  
+      <div class="m-3">
+        <label for="consumo"><b>Baterias/5kw</b> <small id="bt">R$1.400,00</small></label>
+        <input type="number" class="form-control" id="bateria" placeholder="Kw" value="0" required>      
+      </div>
+      <div class="m-3">
+          <label for="inversor"><b>Inversor</b> <small id="bt">R$3.500,00</small></label>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="inversor" value="sim" checked>
+              <label class="form-check-label" for="sim">Sim</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="inversor" value="nao">
+              <label class="form-check-label" for="nao">Não</label>
+            </div>              
+          </div>
+      </div>  
+  </div>
+    <button class="btn btn-primary m-3" type="submit">Calcular</button>
   </form>      
 </div>
 <result class="row bg-warning text-center"></result>
@@ -29,30 +46,58 @@
   }
 </style>
 <script>
-  $('button').click(() => {
+  $('button').click(event => {
+    event.preventDefault();    
     let valor = $('#valor').val();
-    let consumo = $('#consumo').val(); 
+    let consumo = $('#consumo').val();     
+    let inversor;     
+    if($('input[type="radio"]:checked').val() == 'sim'){
+      inversor = 3500;
+    }else{inversor=0}
+    let bateria = ($('#bateria').val())*1400;     
     let anual = valor*consumo*12;
+    let painel = 270/1000;
     let painelMes = ((270*6)/1000)*30;
     let preco = 560;
     let qdtPainel = Math.floor(consumo/painelMes);
     let precoWatt = valor/consumo;
-    let total = qdtPainel*preco;
+    let total = (qdtPainel*preco)+bateria+inversor;
     let mensal = (painelMes*qdtPainel*precoWatt).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     let trintaAnos = (painelMes*qdtPainel*12*30).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-      let eco = `<div class="col-6">
+  
+    
+    let eco = `<div class="col-lg-4 col-md-6 col-sm-12">
                   <div id="res">
                     <h3>Investimento</h3>
-                    <h5>R$ ${total}</h5>
-                    <p><b>Qtde de painéis:</b> ${qdtPainel} x 270w</p>
-                    <p><b>Recuperação:</b> ${Math.ceil(total/valor)} meses</p>
+                    <h5>${(total).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h5>
+                    <p><b>Consumo Diário:</b> ${(consumo/30).toFixed(2)} Kw</p>
                     <p><b>Valor do Kw:</b> ${(precoWatt).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
-                    <p><b>Produção mensal:</b> ${(painelMes*qdtPainel).toFixed(2)} Kw</p>
+                    <p><b>Recuperação:</b> ${Math.ceil(total/valor)} meses</p>
                     <p><b>Economia mensal:</b> ${mensal}</p>
                     <p><b>Economia em 30 anos:</b> ${(trintaAnos)}</p>
                   </div>
-                </div>                
+                </div> 
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div id="res">
+                    <h3>Meio Ambiente</h3>
+                    <h5>Redução de CO2</h5>
+                    <p><b>Mensal:</b> ${((painelMes*qdtPainel)*0.05).toFixed(2)} Kg</p>
+                    <p><b>Em 30 anos:</b> ${(((painelMes*qdtPainel)*0.05*30)/1000).toFixed(2)} toneladas</p>
+                    <p><b>Árvores plantadas:</b> ${Math.ceil(((painelMes*qdtPainel)*0.05*30)/130)} </p>
+                  </div>
+                </div>                 
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div id="res">
+                    <h3>Sistema</h3>
+                    <h5>${(painel*qdtPainel).toFixed(2)} Kwp</h5>
+                    <p><b>Painéis:</b> ${qdtPainel} x 270w/h</p>
+                    <p><b>Inversores:</b> 1</p>
+                    <p><b>Bateria:</b> ${$('#bateria').val()}</p> 
+                    <p><b>Produção mensal:</b> ${(painelMes*qdtPainel).toFixed(2)} Kw</p>                   
+                  </div>
+                </div> 
                 `;       
       $('result').html(eco);
+      
   });
 </script>
