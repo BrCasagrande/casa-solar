@@ -1,0 +1,80 @@
+{
+    "paineis":[
+        {
+            "imgPrincipal":"img/p3.png"
+            ,"tituloPrincipal": "Produza sua Própria Energia Limpa"
+            ,"textoPrincipal": "Painéis solares produzem energia renovável e aumentam sua independência. Nossos painéis excedem os padrões da indústria em termos de durabilidade e vida útil."
+            ,"colunas":[
+                {
+                    "img":"img/p1.png"
+                    ,"titulo": "Painéis com um design elegante e discreto"
+                    ,"texto": "Nossos painéis solares se misturam ao seu teto com saias frontais integradas e nenhum hardware de montagem visível. O resultado é uma aparência limpa e simplificada."
+                },
+                {
+                    "img":"img/p2.png"
+                    ,"titulo": "Painéis Solares Monocristalinos"
+                    ,"texto": "Feitos de células monocristalinas de silício, possuem a eficiência mais alta com cor uniforme, indicando silício de alta pureza."
+                }
+            ]
+        }
+    ],
+
+    "baterias":[
+        {
+            "imgPrincipal":"img/pw.png"
+            ,"tituloPrincipal": "Energia Continua Durante um Blackout"
+            ,"textoPrincipal": "Quando a rede cair, a energia solar continuará a alimentar sua casa e recarregará seu Powerwall."
+            ,"colunas":[
+                {
+                    "img":"img/pw1.png"
+                    ,"titulo": "Casa Auto-Alimentada"
+                    ,"texto": "Em um dia típico, a Powerwall atendera a todas as necessidades de energia da sua casa."                
+                },
+                {
+                    "img":"img/pw2.png"
+                    ,"titulo": "Detecta Interrupção"
+                    ,"texto": "Ao desconectar-se da rede o Powerwall pode detectar uma interrupção e restaurar automaticamente a energia para sua casa em uma fração de segundo."
+                }
+            ]
+        }
+    ],
+    "telhas":[
+        {
+            "imgPrincipal":"img/"
+            ,"tituloPrincipal": ""
+            ,"textoPrincipal": ""
+            ,"colunas":[
+                {
+                    "img":"img/"
+                    ,"titulo": ""
+                    ,"texto": ""                
+                },
+                {
+                    "img":"img/"
+                    ,"titulo": ""
+                    ,"texto": ""
+                }
+            ]
+        }
+    ],
+    "inversores":[
+        {
+            "imgPrincipal":"img/"
+            ,"tituloPrincipal": ""
+            ,"textoPrincipal": ""
+            ,"colunas":[
+                {
+                    "img":"img/"
+                    ,"titulo": ""
+                    ,"texto": ""                
+                },
+                {
+                    "img":"img/"
+                    ,"titulo": ""
+                    ,"texto": ""
+                }
+            ]
+        }
+    ]
+    
+}
