@@ -1,7 +1,7 @@
 {
     "paineis":[
         {
-            "imgPrincipal":"img/p3.png"
+            "imgPrincipal":"img/pp.png"
             ,"tituloPrincipal": "Produza sua Própria Energia Limpa"
             ,"textoPrincipal": "Painéis solares produzem energia renovável e aumentam sua independência. Nossos painéis excedem os padrões da indústria em termos de durabilidade e vida útil."
             ,"colunas":[
@@ -15,8 +15,29 @@
                     ,"titulo": "Painéis Solares Monocristalinos"
                     ,"texto": "Feitos de células monocristalinas de silício, possuem a eficiência mais alta com cor uniforme, indicando silício de alta pureza."
                 }
+            ],
+            "tec":[
+               {
+                "img":"img/p3.png"
+                ,"info":[                    
+                        "Máxima Potência (Pm): 275 Watts"
+                        ,"Tolerância: 0 ~ + 5 Watts"
+                        ,"Tensão de Máxima Potência (Vm) : 31,0 Volts"
+                        ,"Corrente de Máxima Potência (Im): 8,88 Amps"
+                        ,"Tensão de Circuito Aberto (Voc): 38,0 Volts"
+                        ,"Corrente de Curto-Circuito (Isc): 9,45 Amps"
+                        ,"Tensão Máxima do Sistema: 1000 Volts"
+                        ,"Eficiência do Painel: 16,80%"
+                        ,"Coeficiente de Temperatura da Potência(Pm): -0,41 %/°C"
+                        ,"Coeficiente de Temperatura da Corrente(Isc): 0,053 %/°C"
+                        ,"Coeficiente de Temperatura da Tensão(Voc): -0,31 %/°C"
+                        ,"Temperatura Nominal de Operação de Célula (TNOC/NOCT): 43±2°C"
+                    ]
+                }
             ]
         }
+        
+        
     ],
 
     "baterias":[
