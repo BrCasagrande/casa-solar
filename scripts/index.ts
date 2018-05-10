@@ -40,18 +40,21 @@ let pContent = () =>{
         let lnk = $(this); 
         $.post('scripts/partials/produtos.json', (data, status)=>{    
             let produto;
+            let info; 
             if( lnk.attr('value') == 'paineis'){
                 produto = data.paineis[0];                
+                info = data.paineis.tec[0].info;
             } else if( lnk.attr('value') == 'baterias'){
-                produto = data.baterias[0];                
+                produto = data.baterias[0];  
+                info = data.baterias.tec[0].info;              
             }   
-            let cont = `<img src="${produto.imgPrincipal}" class="img-fluid">
+            let cont = `<img src="${produto.imgPrincipal}" class="img-fluid w-100">
             <div class="text-center">
                 <div class="container m-5">
                         <h2>${produto.tituloPrincipal}</h2>
                         <p>${produto.textoPrincipal}</p>
                 </div>
-                <div class="row">
+                <div class="row m-0">
                     <div class="col-lg-6 bk">
                             <div class="painelT p-5">
                                 <h4>${produto.colunas[0].titulo}</h4>
@@ -59,35 +62,43 @@ let pContent = () =>{
                             </div>
                     </div>
                     <div class="col-lg-6">
-                        <img class="img-fluid" src="${produto.colunas[0].img}">
+                        <img class="img-fluid w-100" src="${produto.colunas[0].img}">
                     </div>
                 </div>
-                <div class="row">
-                        <div class="col-lg-6">
-                            <img class="img-fluid" src="${produto.colunas[1].img}">
+                <div class="row m-0">
+                    <div class="col-lg-6">
+                        <img class="img-fluid w-100" src="${produto.colunas[1].img}">
+                    </div>
+                    <div class="col-lg-6 bk">
+                        <div class="painelT p-5">
+                            <h4>${produto.colunas[1].titulo}</h4>
+                            <p>${produto.colunas[1].texto}</p>
                         </div>
-                        <div class="col-lg-6 bk">
-                            <div class="painelT p-5">
-                                <h4>${produto.colunas[1].titulo}</h4>
-                                <p>${produto.colunas[1].texto}</p>
-                            </div>
+                    </div>
+                </div>   
+                <div class="row m-0 bg-dark text-light">
+                    <div class="col-lg-6">
+                        <img class="img-fluid w-100" src="${produto.colunas[1].img}">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="painelT p-5">
+                            <h3>Informações Técnicas</h3>
+                            <p></p>
                         </div>
-                </div>
-            </div>`
-            
-            $('pContent').html(cont);
-        });
-        
-        
+                    </div>
+                </div>               
 
-        
-        $('#hp').text(lnk.text());
-        /*$("pcontent").load(`scripts/partials/${lnk.attr('value')}.html`, 
-        (response, status, xhr)=>{
-            if(status == "error"){
-                $("pcontent").load(`scripts/partials/404.html`)
-            }   
-            console.log(xhr);         
-        });   */      
+            </div>`;            
+            $('pContent').html(cont);
+            console.log(produto.tec[0].info);
+        });           
+        $('#hp').text(lnk.text());           
     });    
+}
+
+const insertText = item =>{
+    let result = "";
+    for(let i in item){
+        result += '';
+    }
 }
