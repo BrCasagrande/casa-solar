@@ -56,7 +56,26 @@
                     ,"titulo": "Detecta Interrupção"
                     ,"texto": "Ao desconectar-se da rede o Powerwall pode detectar uma interrupção e restaurar automaticamente a energia para sua casa em uma fração de segundo."
                 }
-            ]
+            ],
+            "tec":[
+                {
+                 "img":"img/pw3.png"
+                 ,"info":[
+                    "Capacidade Utilizável: 13,5 kWh"
+                    ,"Profundidade de Descarga: 100%"
+                    ,"Eficiência: 90% ida e volta"
+                    ,"Potência: 7kW pico / 5kW contínuo"
+                    ,"Aplicações suportadas: Auto-consumo solar Energia de back-up, Controle baseado em tempo Recursos"
+                    ,"Garantia de 10 anos"
+                    ,"Escalável até 10 Powerwalls"
+                    ,"Temperatura de operação de -4 ° F a 122 ° F / -20 ° C a 50 ° C"
+                    ,"Dimensões L x L x D: 1150 x 755 x 155 mm"
+                    ,"Peso 276 lbs / 125 kg"
+                    ,"Instalação no chão ou na parede(Interior ou exterior)"
+                    ,"Certificação norte-americana e padrões internacionais compatível com código de grade"
+                    ]
+                 }
+             ]
         }
     ],
     "telhas":[
