@@ -40,13 +40,13 @@ let pContent = () =>{
         let lnk = $(this); 
         $.post('scripts/partials/produtos.json', (data, status)=>{    
             let produto;
-            let info; 
+            let tec; 
             if( lnk.attr('value') == 'paineis'){
                 produto = data.paineis[0];                
-                info = data.paineis.tec[0].info;
+                tec = data.paineis[0].tec[0];
             } else if( lnk.attr('value') == 'baterias'){
                 produto = data.baterias[0];  
-                info = data.baterias.tec[0].info;              
+                tec = data.baterias[0].tec[0];              
             }   
             let cont = `<img src="${produto.imgPrincipal}" class="img-fluid w-100">
             <div class="text-center">
@@ -76,21 +76,19 @@ let pContent = () =>{
                         </div>
                     </div>
                 </div>   
-                <div class="row m-0 bg-dark text-light">
-                    <div class="col-lg-6">
-                        <img class="img-fluid w-100" src="${produto.colunas[1].img}">
+                <div class="row m-0 bg-dark text-light">                    
+                    <div class="col-lg-6 p-4">
+                        <img class="h-100" src="${tec.img}">
                     </div>
                     <div class="col-lg-6">
-                        <div class="painelT p-5">
-                            <h3>Informações Técnicas</h3>
-                            <p></p>
+                        <div class="p-5">        
+                            <h2>Informações Técnicas</h2>                    
+                            ${insertText(tec.info)}
                         </div>
                     </div>
-                </div>               
-
+                </div>      
             </div>`;            
-            $('pContent').html(cont);
-            console.log(produto.tec[0].info);
+            $('pContent').html(cont);            
         });           
         $('#hp').text(lnk.text());           
     });    
@@ -99,6 +97,7 @@ let pContent = () =>{
 const insertText = item =>{
     let result = "";
     for(let i in item){
-        result += '';
+        result += `<p>${item[i]}</p>`
     }
+    return result;
 }
