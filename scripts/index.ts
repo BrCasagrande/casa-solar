@@ -33,6 +33,7 @@ let loadContent = () =>{
         });         
     });    
 }
+//Produtos.html
 let pContent = () =>{        
     let nl = $('#navProdutos .nav-link'); 
     nl.click(function(){
@@ -41,47 +42,33 @@ let pContent = () =>{
         $.post('scripts/partials/produtos.json', (data, status)=>{    
             let produto;
             let tec; 
+            //Seleciona o texto de produtos.json
             if( lnk.attr('value') == 'paineis'){
                 produto = data.paineis[0];                
                 tec = data.paineis[0].tec[0];
             } else if( lnk.attr('value') == 'baterias'){
                 produto = data.baterias[0];  
                 tec = data.baterias[0].tec[0];              
-            }   
+            } else if( lnk.attr('value') == 'telhas'){
+                produto = data.telhas[0];  
+                tec = data.telhas[0].tec[0];              
+            }  else if( lnk.attr('value') == 'inversores'){
+                produto = data.inversores[0];  
+                tec = data.inversores[0].tec[0];             
+            }    
             let cont = `<img src="${produto.imgPrincipal}" class="img-fluid w-100">
             <div class="text-center">
                 <div class="container m-5">
                         <h2>${produto.tituloPrincipal}</h2>
                         <p>${produto.textoPrincipal}</p>
                 </div>
-                <div class="row m-0">
-                    <div class="col-lg-6 bk">
-                            <div class="painelT p-5">
-                                <h4>${produto.colunas[0].titulo}</h4>
-                                <p>${produto.colunas[0].texto}</p>
-                            </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <img class="img-fluid w-100" src="${produto.colunas[0].img}">
-                    </div>
-                </div>
-                <div class="row m-0">
-                    <div class="col-lg-6">
-                        <img class="img-fluid w-100" src="${produto.colunas[1].img}">
-                    </div>
-                    <div class="col-lg-6 bk">
-                        <div class="painelT p-5">
-                            <h4>${produto.colunas[1].titulo}</h4>
-                            <p>${produto.colunas[1].texto}</p>
-                        </div>
-                    </div>
-                </div>   
+                ${insertItem(produto.colunas)}                  
                 <div class="row m-0 bg-dark text-light">                    
-                    <div class="col-lg-6 p-4">
-                        <img class="h-100" src="${tec.img}">
+                    <div class="col-lg-8 p-4">
+                        <img class="w-100" src="${tec.img}">
                     </div>
-                    <div class="col-lg-6">
-                        <div class="p-5">        
+                    <div class="col-lg-4">
+                        <div class="p-3">        
                             <h2>Informações Técnicas</h2>                    
                             ${insertText(tec.info)}
                         </div>
@@ -101,3 +88,23 @@ const insertText = item =>{
     }
     return result;
 }
+const insertItem = item =>{
+    let result = "";
+    let posicao = "order-last";
+    for(let i in item){
+        if(posicao == ""){ posicao = "order-last" } else{posicao = ""}
+        result += `
+        <div class="row m-0">
+            <div class="col-lg-6 bk ${posicao}">
+                <div class="painelT p-5">
+                    <h4>${item[i].titulo}</h4>
+                    <p>${item[i].texto}</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid w-100" src="${item[i].img}">
+            </div>
+        </div>`
+    }
+    return result;
+}//Produtos.html end
