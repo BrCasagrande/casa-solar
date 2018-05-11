@@ -1,14 +1,5 @@
 #navPrincipal {
   background-color: #099042; }
-  #navPrincipal #logo {
-    background-image: url(../img/logo.png);
-    background-repeat: no-repeat;
-    width: 2.5em;
-    height: 2.5em;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: cover;
-    margin: 0.25em; }
 
 .nav-link:focus {
   font-weight: bold; }
@@ -45,15 +36,13 @@ h2 {
   padding-top: 1em;
   padding-bottom: 1em; }
 
-.carousel-item {
-  height: 500px; }
-
 #servico div {
   height: 20em;
   padding: 1em;
   text-align: center;
   background-color: #fff;
-  border-bottom: 6px solid #ccc; }
+  border-bottom: 0px solid #ccc;
+  transition: border-bottom 0.5s, box-shadow 0.5s; }
   #servico div:hover {
     box-shadow: 0px 5px 10px 5px #ccc;
     border-bottom: 6px solid #1a9b00;
@@ -64,6 +53,8 @@ h2 {
 
 #sobre {
   background-color: #f8f8f8; }
+  #sobre h2 {
+    background-color: #099042; }
   #sobre img {
     margin-bottom: 1em; }
   #sobre p {
