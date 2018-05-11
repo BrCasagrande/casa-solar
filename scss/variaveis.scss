@@ -1,0 +1,8 @@
+$cor-padrao: #099042;
+
+
+@mixin desktop{
+	@media screen and (min-width: 992px) { 	
+		@content;
+	}
+}
