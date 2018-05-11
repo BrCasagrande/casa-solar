@@ -28,10 +28,6 @@
                         ,"Corrente de Curto-Circuito (Isc): 9,45 Amps"
                         ,"Tensão Máxima do Sistema: 1000 Volts"
                         ,"Eficiência do Painel: 16,80%"
-                        ,"Coeficiente de Temperatura da Potência(Pm): -0,41 %/°C"
-                        ,"Coeficiente de Temperatura da Corrente(Isc): 0,053 %/°C"
-                        ,"Coeficiente de Temperatura da Tensão(Voc): -0,31 %/°C"
-                        ,"Temperatura Nominal de Operação de Célula (TNOC/NOCT): 43±2°C"
                     ]
                 }
             ]
@@ -80,40 +76,68 @@
     ],
     "telhas":[
         {
-            "imgPrincipal":"img/"
-            ,"tituloPrincipal": ""
-            ,"textoPrincipal": ""
+            "imgPrincipal":"img/pr.png"
+            ,"tituloPrincipal": "Alimente sua casa com um lindo telhado solar"
+            ,"textoPrincipal": "O Solar Roof complementa a arquitetura da sua casa enquanto transforma a luz solar em eletricidade. Com uma bateria Powerwall integrada, a energia coletada durante o dia é armazenada e disponibilizada a qualquer momento, transformando efetivamente sua casa em uma utilidade pessoal. As placas solares de vidro são tão duráveis ​​que são garantidas durante toda a vida da sua casa."
             ,"colunas":[
                 {
-                    "img":"img/"
-                    ,"titulo": ""
-                    ,"texto": ""                
+                    "img":"img/pr1.png"
+                    ,"titulo": "Células Solares Invisíveis"
+                    ,"texto": "Personalize a quantidade de eletricidade que seu Solar Roof produz para atender às suas necessidades de energia. Esta característica é possível usando dois tipos de telha de vidro, telha solar e telha não solar. Ambos aparecem iguais vistos da rua."                
                 },
                 {
-                    "img":"img/"
-                    ,"titulo": ""
-                    ,"texto": ""
+                    "img":"img/pr2.png"
+                    ,"titulo": "Alta resistência"
+                    ,"texto": "Feitas com vidro temperado, as telhas solares são mais de três vezes mais fortes que as telhas padrão. É por isso que oferecemos a melhor garantia do setor."
                 }
-            ]
+            ],
+            "tec":[
+                {
+                 "img":"img/pr3.png"
+                 ,"info":[
+                    "Garantia da telha: vida útil da sua casa"
+                    ,"Garantia de energia: 30 anos"
+                    ,"Garantia de climatização: 30 anos"
+                    ,"Tamanho: 20 x 35 cm"
+                    ,"Hail rating: Classe 4 ANSI FM 4473 (melhor classificação de granizo)"
+                    ,"Classificação vento: Classe F ASTM D3161 (melhor classificação de vento)"
+                    ,"Classificação de incêndio: Classe A UL 790 (melhor classificação de incêndio)"
+                 ]
+                 }
+             ]
         }
     ],
     "inversores":[
         {
-            "imgPrincipal":"img/"
-            ,"tituloPrincipal": ""
-            ,"textoPrincipal": ""
+            "imgPrincipal":"img/pi.png"
+            ,"tituloPrincipal": "Mantenha sua Casa Segura"
+            ,"textoPrincipal": "O Inversor Grid-tie Fronius Primo possui proteções contra sobrecarga, entrada e saída isoladas e baixa distorção no sinal de saída."
             ,"colunas":[
                 {
-                    "img":"img/"
-                    ,"titulo": ""
-                    ,"texto": ""                
+                    "img":"img/pi1.png"
+                    ,"titulo": "Designer Inovador"
+                    ,"texto": "Possui designer inovador que oferece flexibilidade para instalação e manutenção, outro diferencial é o visor interativo que apresenta em tempo real informações do sistema, como produção instântanea."                
                 },
                 {
-                    "img":"img/"
-                    ,"titulo": ""
-                    ,"texto": ""
+                    "img":"img/pi2.png"
+                    ,"titulo": "Monitoramento Remoto"
+                    ,"texto": "A linha Primo de inversor Grid-tie apresenta comunicação por WLAN, que possibilita monitoramento remoto adcional."
                 }
-            ]
+            ],
+            "tec":[
+                {
+                 "img":"img/pi3.png"
+                 ,"info":[
+                    "Dimensões (mm): 645 x 431 x 204 mm"
+                    ,"Garantia do Fabricante 5 anos contra defeito de fabricação. Vida útil estimada de 10 a 15 anos"
+                    ,"Faixa de Potência Inversor Grid-Tie de 2,0 a 5,0 Kw"
+                    ,"Potência Máxima CA (VA): 3000"
+                    ,"Frequencia (Hz): 60"
+                    ,"Eficiência Máxima (%): 97,9"
+                    ,"Marca: Fronius"
+                 ]
+                 }
+             ]
         }
     ]
     
