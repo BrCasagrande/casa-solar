@@ -95,8 +95,8 @@ const insertItem = item =>{
         if(posicao == ""){ posicao = "order-last" } else{posicao = ""}
         result += `
         <div class="row m-0">
-            <div class="col-lg-6 bk ${posicao}">
-                <div class="painelT p-5">
+            <div class="col-lg-6 bk d-flex align-items-center p-3 ${posicao}">
+                <div>
                     <h4>${item[i].titulo}</h4>
                     <p>${item[i].texto}</p>
                 </div>

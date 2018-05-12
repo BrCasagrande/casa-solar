@@ -83,7 +83,7 @@ var insertItem = function (item) {
         else {
             posicao = "";
         }
-        result += "\n        <div class=\"row m-0\">\n            <div class=\"col-lg-6 bk " + posicao + "\">\n                <div class=\"painelT p-5\">\n                    <h4>" + item[i].titulo + "</h4>\n                    <p>" + item[i].texto + "</p>\n                </div>\n            </div>\n            <div class=\"col-lg-6\">\n                <img class=\"img-fluid w-100\" src=\"" + item[i].img + "\">\n            </div>\n        </div>";
+        result += "\n        <div class=\"row m-0\">\n            <div class=\"col-lg-6 bk d-flex align-items-center p-3 " + posicao + "\">\n                <div>\n                    <h4>" + item[i].titulo + "</h4>\n                    <p>" + item[i].texto + "</p>\n                </div>\n            </div>\n            <div class=\"col-lg-6\">\n                <img class=\"img-fluid w-100\" src=\"" + item[i].img + "\">\n            </div>\n        </div>";
     }
     return result;
 }; //Produtos.html end
