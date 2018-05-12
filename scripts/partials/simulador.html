@@ -72,7 +72,7 @@
                     <h5>${(total).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h5>
                     <p><b>Consumo Diário:</b> ${(consumo/30).toFixed(2)} Kw</p>
                     <p><b>Valor do Kw:</b> ${(precoWatt).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
-                    <p><b>Recuperação:</b> ${Math.ceil(total/valor)} meses</p>
+                    <p><b>Recuperação:</b> ${Math.floor(Math.ceil(total/valor)/12)} anos e ${Math.ceil(total/valor)%12} meses</p>
                     <p><b>Economia mensal:</b> ${mensal}</p>
                     <p><b>Economia em 30 anos:</b> ${(trintaAnos)}</p>
                   </div>
