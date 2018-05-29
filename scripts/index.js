@@ -1,5 +1,11 @@
 "use strict";
 $(document).ready(function () {
+    $.ajaxSetup({
+        headers: {
+            'Content-Type': 'application/json', 
+            'Accept': 'application/json'
+        }        
+     });
     createPage();
     carragaAjax();
     $("conteudo").load("scripts/partials/home.html");
